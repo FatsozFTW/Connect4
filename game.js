@@ -117,7 +117,7 @@ document.addEventListener("click", e => {
     {
 
         console.log("tied");
-        if(confirm("Do you want to reset?") == true)
+        if(confirm("You Tied. Do you want to reset?") == true)
         {
             reset();
         }
