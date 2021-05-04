@@ -218,4 +218,6 @@ function reset()
         }
     }
     win = 0;
+    moves = 0;
+    model.next = "X";
 }
