@@ -117,10 +117,8 @@ document.addEventListener("click", e => {
     {
 
         console.log("tied");
-        if(confirm("You Tied. Do you want to reset?") == true)
-        {
-            reset();
-        }
+        alarm("It is a tie!");
+        reset();
         return;
     }
     
