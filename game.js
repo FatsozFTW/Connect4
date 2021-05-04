@@ -76,21 +76,27 @@ document.addEventListener("click", e => {
     if (j < 0 || j > 6) return;
     console.log(e.x, e.y);
     console.log(i,j, i+j*7);
+    if(win == 1)
+    {
+        reset();
+        return;
+    }
+    else {
+        if (myGrid[i][j] != '.') {
+        return;
+        }
+    }
+    if(myGrid[i][j+1] == ".")
+    {
+        return;
+    }
+    myGrid[i][j] = model.next;
+
     if(checkWin(model.next))
     {
-        
-        //change here
-        if(win == 1)
-        {
-            reset();
-        }
-        else 
-        {
-            console.log("winner winner");
-            alert(model.next + " Won! Click anywhere on the board to reset");
-            win = 1;
-            
-        }
+        console.log("winner winner");
+        alert(model.next + " Won! Click anywhere on the board to reset");
+        win = 1;
         
         return;
     }
@@ -105,16 +111,6 @@ document.addEventListener("click", e => {
         moves++;
         }
     }
-    if (myGrid[i][j] != '.') {
-    return;
-    }
-    if(myGrid[i][j+1] == ".")
-    {
-        return;
-    }
-    myGrid[i][j] = model.next;
-
-    
 
     
     if(tied())
