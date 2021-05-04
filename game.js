@@ -1,3 +1,4 @@
+//connect 4
 let canvas;
 let moves = 0;
 let context;
