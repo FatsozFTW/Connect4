@@ -76,15 +76,6 @@ document.addEventListener("click", e => {
     if (j < 0 || j > 6) return;
     console.log(e.x, e.y);
     console.log(i,j, i+j*7);
-    if (myGrid[i][j] != '.') {
-    return;
-    }
-    if(myGrid[i][j+1] == ".")
-    {
-        return;
-    }
-    myGrid[i][j] = model.next;
-
     if(checkWin(model.next))
     {
         
@@ -114,6 +105,16 @@ document.addEventListener("click", e => {
         moves++;
         }
     }
+    if (myGrid[i][j] != '.') {
+    return;
+    }
+    if(myGrid[i][j+1] == ".")
+    {
+        return;
+    }
+    myGrid[i][j] = model.next;
+
+    
 
     
     if(tied())
