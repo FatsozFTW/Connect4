@@ -95,6 +95,7 @@ document.addEventListener("click", e => {
     if(checkWin(model.next))
     {
         console.log("winner winner");
+        splat();
         alert(model.next + " Won! Click anywhere on the board to reset");
         win = 1;
         
