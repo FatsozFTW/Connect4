@@ -117,7 +117,7 @@ document.addEventListener("click", e => {
     {
 
         console.log("tied");
-        alarm("It is a tie!");
+        alert("It is a tie!");
         reset();
         return;
     }
